@@ -13,7 +13,6 @@
 		D2F9EFCA1EFEBBB700007790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F9EFC91EFEBBB700007790 /* Assets.xcassets */; };
 		D2F9EFCD1EFEBBB700007790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F9EFCB1EFEBBB700007790 /* LaunchScreen.storyboard */; };
 		D2F9EFD51EFEBD4D00007790 /* DwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F9EFD41EFEBD4D00007790 /* DwiftView.swift */; };
-		D2F9EFD71EFEBD6F00007790 /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F9EFD61EFEBD6F00007790 /* BallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		D2F9EFCC1EFEBBB700007790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2F9EFCE1EFEBBB700007790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F9EFD41EFEBD4D00007790 /* DwiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DwiftView.swift; sourceTree = "<group>"; };
-		D2F9EFD61EFEBD6F00007790 /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				D2F9EFC21EFEBBB700007790 /* AppDelegate.swift */,
 				D2F9EFC41EFEBBB700007790 /* DwiftController.swift */,
 				D2F9EFD41EFEBD4D00007790 /* DwiftView.swift */,
-				D2F9EFD61EFEBD6F00007790 /* BallView.swift */,
 				D2F9EFC61EFEBBB700007790 /* Main.storyboard */,
 				D2F9EFC91EFEBBB700007790 /* Assets.xcassets */,
 				D2F9EFCB1EFEBBB700007790 /* LaunchScreen.storyboard */,
@@ -146,7 +143,6 @@
 				D2F9EFC51EFEBBB700007790 /* DwiftController.swift in Sources */,
 				D2F9EFD51EFEBD4D00007790 /* DwiftView.swift in Sources */,
 				D2F9EFC31EFEBBB700007790 /* AppDelegate.swift in Sources */,
-				D2F9EFD71EFEBD6F00007790 /* BallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +308,7 @@
 				D2F9EFD31EFEBBB700007790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
