@@ -37,6 +37,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2A3D5E31F00AAE500B44411 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F9EFC21EFEBBB700007790 /* AppDelegate.swift */,
+				D2F9EFCB1EFEBBB700007790 /* LaunchScreen.storyboard */,
+				D2F9EFCE1EFEBBB700007790 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D2F9EFB61EFEBBB700007790 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +66,11 @@
 		D2F9EFC11EFEBBB700007790 /* natcode_0101_CAVersion */ = {
 			isa = PBXGroup;
 			children = (
-				D2F9EFC21EFEBBB700007790 /* AppDelegate.swift */,
 				D2F9EFC41EFEBBB700007790 /* DwiftController.swift */,
 				D2F9EFD41EFEBD4D00007790 /* DwiftView.swift */,
 				D2F9EFC61EFEBBB700007790 /* Main.storyboard */,
 				D2F9EFC91EFEBBB700007790 /* Assets.xcassets */,
-				D2F9EFCB1EFEBBB700007790 /* LaunchScreen.storyboard */,
-				D2F9EFCE1EFEBBB700007790 /* Info.plist */,
+				D2A3D5E31F00AAE500B44411 /* Supporting Files */,
 			);
 			path = natcode_0101_CAVersion;
 			sourceTree = "<group>";
