@@ -6,6 +6,9 @@
 //  Copyright © 2017 carlynorama. All rights reserved.
 //
 
+//https://stackoverflow.com/questions/38112061/correct-handling-cleanup-etc-of-cadisplaylink-in-swift-custom-animation
+//https://www.raywenderlich.com/100939/how-to-create-an-elastic-animation-with-swift
+
 import UIKit
 
 class DwiftController: UIViewController, UICollisionBehaviorDelegate {
@@ -16,15 +19,15 @@ class DwiftController: UIViewController, UICollisionBehaviorDelegate {
         get { return dwiftView.layer }
     }
     
-    //let displayLink = CADisplayLink(target: self, selector: #selector(update))
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //MARK: Circle - define and attach
         let circle = CAShapeLayer()
         circle.frame =  CGRect(x: 0.0, y: 0.0, width: 280.0, height: 280.0)
-        circle.position = dwiftView.center
+        circle.position = CGPoint(x:dwiftView.bounds.midX, y:dwiftView.bounds.midY)
         circle.cornerRadius = circle.frame.width/2
         
         
@@ -66,7 +69,7 @@ class DwiftController: UIViewController, UICollisionBehaviorDelegate {
         
         let rectangle = CAShapeLayer()
         rectangle.frame =  CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0)
-        rectangle.position = dwiftView.center
+        rectangle.position = dwiftView.convert(dwiftView.center, from: dwiftView.superview)
         rectangle.cornerRadius = 5.0
         rectangle.backgroundColor = UIColor.white.cgColor
         
@@ -77,16 +80,7 @@ class DwiftController: UIViewController, UICollisionBehaviorDelegate {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.byValue = rotationAngle
         rotationAnimation.repeatCount = .infinity
-        
-        //MARK: ShootingStar - Manual Animation
-//        let shootingStar = CAShapeLayer()
-//        shootingStar.frame =  CGRect(x: 0.0, y: 0.0, width: 10.0, height: 10.0)
-//        shootingStar.cornerRadius = 5.0
-//        shootingStar.backgroundColor = UIColor.white.cgColor
-//        
-//        dwiftView.layer.addSublayer(shootingStar);
-//        displayLink.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
-        //var orbitVector:CGVector = CGVector(dx:2.0, dy:6.0)
+
         
         //MARK: Attach animations
         
@@ -97,36 +91,8 @@ class DwiftController: UIViewController, UICollisionBehaviorDelegate {
 
     }
     
-//    func update() {
-//        if let layerToMove = dwiftView.layer.sublayers?[3]{
-//        move(item:layerToMove , vector: CGVector(dx:2.0, dy:6.0) )
-//    }
-//    }
-//    
-//    
-//    func move(item:CALayer, vector:CGVector) {
-//        var calculatedPosition = getNewPositition(startPosition: item.position, vector: vector)
-//        
-//        if calculatedPosition.x > dwiftView.bounds.width || calculatedPosition.y > dwiftView.bounds.height {
-//            calculatedPosition = CGPoint(x:0, y:0)
-//            
-//        }
-//        //turn off implicit layer animations by using transaction
-//        //necessary so can do the reset jump
-//        CATransaction.begin()
-//        CATransaction.setDisableActions(true)
-//        item.position = calculatedPosition
-//        CATransaction.commit()
-//        
-//    }
-//    
-//    func getNewPositition(startPosition:CGPoint, vector:CGVector) -> CGPoint {
-//        let deltaX:CGFloat = vector.dx
-//        let deltaY:CGFloat = vector.dy
-//        let newPoint:CGPoint = CGPoint(x: startPosition.x+deltaX, y: startPosition.y+deltaY)
-//        return newPoint
-//    }
-//
+
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
